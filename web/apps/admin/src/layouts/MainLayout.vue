@@ -1,7 +1,9 @@
 <template>
   <el-container class="layout">
     <el-aside width="220px" class="aside">
-      <div class="brand">Openbows RMS</div>
+      <div class="brand" role="link" tabindex="0" title="返回首页" @click="goHome" @keydown.enter="goHome">
+        Openbows RMS
+      </div>
       <el-menu
         :default-active="route.path"
         :default-openeds="openedGroups"
@@ -126,6 +128,10 @@ onMounted(() => {
   })
 })
 
+function goHome() {
+  router.push('/home')
+}
+
 function onLogout() {
   auth.logout()
   router.push('/login')
@@ -139,6 +145,13 @@ function onLogout() {
   height: 56px; line-height: 56px; text-align: center;
   color: #fff; font-weight: 700; font-size: 16px;
   border-bottom: 1px solid #2d3a4b;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.brand:hover {
+  background: rgba(64, 158, 255, 0.12);
+  color: #9ecbff;
 }
 .header {
   display: flex; align-items: center; justify-content: space-between;

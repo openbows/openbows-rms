@@ -13,8 +13,9 @@ const router = createRouter({
     {
       path: '/',
       component: () => import('@/layouts/MainLayout.vue'),
-      redirect: '/stores',
+      redirect: '/home',
       children: [
+        { path: 'home', name: 'home', component: () => import('@/views/Home.vue'), meta: { title: '首页' } },
         { path: 'stores', name: 'stores', component: () => import('@/views/modules/Stores.vue'), meta: { title: '门店' } },
         { path: 'users', name: 'users', component: () => import('@/views/modules/Users.vue'), meta: { title: '用户' } },
         { path: 'roles', name: 'roles', component: () => import('@/views/modules/Roles.vue'), meta: { title: '角色' } },

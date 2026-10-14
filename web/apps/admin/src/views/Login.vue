@@ -37,7 +37,7 @@ async function onSubmit() {
   try {
     await auth.login(form.username, form.password)
     ElMessage.success('登录成功')
-    const redirect = (route.query.redirect as string) || '/'
+    const redirect = (route.query.redirect as string) || '/home'
     router.replace(redirect)
   } catch (e: any) {
     ElMessage.error(e?.message || '登录失败')
