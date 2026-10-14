@@ -1,0 +1,9 @@
+server:
+  addr: ":8080"
+
+database:
+  dsn: "host=127.0.0.1 user=postgres password=postgres dbname=openbows_rms port=5432 sslmode=disable TimeZone=Asia/Shanghai"
+
+jwt:
+  secret: "change-me-in-production"
+  expire_hours: 72

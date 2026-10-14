@@ -1,0 +1,5 @@
+DROP TABLE IF EXISTS dish_options;
+DROP TABLE IF EXISTS dish_specs;
+DROP TABLE IF EXISTS dishes;
+DROP TABLE IF EXISTS menu_categories;
+DROP TABLE IF EXISTS stations;

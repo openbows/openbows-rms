@@ -1,0 +1,19 @@
+.cursor/rules/
+
+# local config / secrets
+configs/config.yaml
+.env
+*.exe
+
+# go
+/bin/
+/dist/
+
+# frontend
+web/node_modules/
+web/apps/*/node_modules/
+web/apps/*/dist/
+web/packages/*/node_modules/
+npm-debug.log*
+.DS_Store
+*.log
